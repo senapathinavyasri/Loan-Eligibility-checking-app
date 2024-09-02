@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home Loan</title>
+        <style>
+            body{
+                font-family: Arial;
+            }
+            .logo {
+                float: left;
+                padding: 1px;
+            }
+            nav {
+            background-color: gainsboro;
+            overflow: hidden;
+            height: 80px;
+        }
+        nav ul {
+            list-style-type: none;
+            margin-top: 20px;
+            padding: 0;
+            overflow: hidden;
+            font-size: 20px;
+        }
+        nav li {
+            float: right;
+        }
+        nav li a {
+            display: block;
+        }
+        nav li a {
+            display: block;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        .fo1{
+            
+            padding-bottom: 30px;
+            width:600px;
+            border:2px solid rgb(255, 250, 250);
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        }
+        .sel{
+            height: 30px;
+            width: 90%;
+        }
+        .bu{
+            height:35px;
+            width:510px;
+            background-color: #4bae4f;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+        .bu:hover {
+            background-color: #b0b0fb; /* Change background color on hover */
+        }
+        .fo2{
+            margin-left: 34px;
+            margin-top:50px;
+        }
+        a {
+            position: relative;
+            color: #000;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #000;
+        }
+
+        a::before {
+        content: "";
+            position: absolute;
+            display: block;
+            width: 100%;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            top:38px;
+            background-color: #000;
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        a:hover::before {
+            transform: scaleX(0.6);
+        } 
+        .maincon{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <div class="logo">
+                <img src="https://i.ibb.co/mNHPCKb/LOAN-10-removebg-preview.png"height="100"width="140">
+            </div>
+            <ul>
+                <li><a href="logout">Logout</a></li>
+                
+            </ul>
+        </nav>
+        <center><h1>HOME LOAN</h1></center>
+        <div class="maincon">
+        <div class="fo1">
+            <div class="fo2">
+                <form action="result">
+            <h3><label>Gender</label></h3>
+            <select class="sel" required name="gender">
+                <option>Male</option>
+                <option>Female</option></select><br>
+                <h3><label>Married</label></h3>
+                <select class="sel" required name="married">
+                    <option>Yes</option>
+                    <option>No</option>
+                </select><br>
+                <h3><label>Dependents</label></h3>
+                <input type="number" name="dependents" id="" class="sel">
+                <br>
+                <h3><label>Educated</label></h3>
+                <select class="sel" name="education">
+                    <option>Graduate</option>
+                    <option>Not Graduate</option>
+                </select><br>
+                <h3><label>Self Employed</label></h3>
+                <select class="sel" name="employed">
+                    <option>Yes</option>
+                    <option>No</option>
+                </select><br>
+                <h3><label>Applicant Income</label></h3>
+                <input class="sel" type="number" name="income" required><br>
+                <h3><label>Coapplicant Income</label></h3>
+                <input class="sel"type="number" name="coincome" required ><br>
+                <h3><label>Loan Amount</label></h3>
+                <input class="sel"type="number" name="loanamount" required><br>
+                <h3><label>Loan Amount Term</label></h3>
+                <input class="sel" type="number" name="loanterm" required><br>
+                <h3><label>Credit_History</label></h3>
+                <select class="sel" name="history">
+                    <option>Yes</option>
+                    <option>No</option>
+                </select><br>
+
+                <h3><label>Property Area</label></h3>
+                <select class="sel" name="area">
+                    <option>Rural</option>
+                    <option>Urban</option>
+                    <option>Semi-Urban</option>
+                </select><br><br>
+
+            <button class="bu">Submit</button>
+            </form>
+            </div>
+        </div>
+        </div>
+    </body>
+</html>

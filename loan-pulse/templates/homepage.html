@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home</title>
+        <style>
+            body{
+                font-family: Arial;
+            }
+            .logo {
+                float: left;
+                padding: 1px;
+            }
+        nav ul {
+            list-style-type: none;
+            margin-top: 30px;
+            padding: 0;
+            overflow: hidden;
+            font-size: 20px;
+        }
+        nav li {
+            float: right;
+            color:black;
+        }
+        nav li a {
+            display: block;
+        }
+        nav li a {
+            display: block;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            color:black;
+        }
+        .logo{
+            margin-top:-40px;
+        }
+        a {
+            position: relative;
+            color: #000;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #000;
+        }
+
+        a::before {
+            content: "";
+            position: absolute;
+            display: block;
+            width: 100%;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            top:38px;
+            background-color: #000;
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        a:hover::before {
+            transform: scaleX(0.5);
+        }
+        body{
+            background-image: url("https://img.freepik.com/premium-photo/house-s-model-mail-letter-with-calculator-pencil-loan-mortgage-home-utilility_42708-803.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+        }
+        .quote{
+            position: absolute;
+            margin-top:100px;
+            margin-left:30px;
+            font-size: 35px;
+            font-family:Georgia, serif;
+
+        }   
+        </style>
+    </head>
+<body>
+    <div class="navi">
+        <nav>
+            <div class="logo">
+                <img src="https://i.ibb.co/mNHPCKb/LOAN-10-removebg-preview.png"height="120"width="160">
+            </div>
+            <ul>
+                <li><a href="loginmain">Login</a></li>
+                <li><a href="signup">Signup</a></li>
+            </ul>
+        </nav>
+        </div>
+        <div class="quote">
+        <p>" Fulfill your aspirations with our loans.<br> Seamless process, competitive rates "</p></div>
+        
+    </body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Prediction</title>
+    <style>
+        .con{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .popup{
+            background-color: #d9d9d9;
+            padding: 15px;
+            width: 400px;
+            
+            
+            visibility: visible;
+            text-align: center;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            transition: transform 0.4s, top 0.4s;
+        }
+        .popup img{
+            margin-top: -30px;
+            width: 80px;
+            height: 80px;
+        }
+        .popup button{
+            padding: 10px;
+            font-weight: 300;
+            width: 120px;
+            height: 40px;
+            font-size: 20px;
+            color: white;
+            border-radius: 2px;
+            background-color: #4bae4f;
+            border: none;
+            padding-bottom: 35px;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+        #res{
+            visibility: hidden;
+        }
+        .change-btn{
+            background-color: red;
+        }
+    </style>
+</head>
+<body id="body">
+    
+    <div class="con">
+        <div class="popup" id="popup">
+            <p id="res">{{res}}</p>
+            <img src="" alt="" id="pic">
+            <h2>You are {{res}} for the loan</h2>
+            <p>Thank you for using our application</p>
+            <form action="dash">
+                <button type="submit" id="btn">ok</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        const res=document.getElementById('res').textContent;
+        const pic=document.getElementById('pic')
+        btn=document.getElementById('btn')
+        function change(){
+            console.log("jsdkfj")
+            if(res=='Eligible'){
+                document.getElementById("pic").src = "https://cdn-icons-png.flaticon.com/128/4315/4315445.png";
+                
+            }
+            else{
+                document.getElementById("pic").src = "https://cdn-icons-png.flaticon.com/128/11560/11560478.png";
+                btn.classList.add('change-btn')
+            }
+        }
+
+        change()
+    </script>
+</body>
+</html>
